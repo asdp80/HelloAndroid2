@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HelloAndroid</string>
+    <string name="btnnver">네이버</string>
+    <string name="btngoogle">google</string>
+    <string name="btndaum">다음</string>
+    <string name="btnyoutube">유튜브</string>
+    <string name="btnexit">끝내기</string>
+
+
+</resources>
