@@ -16,24 +16,28 @@ public class MainActivity extends AppCompatActivity {
     //버튼 클릭 시 작동하길 원하는 이벤트를 onClick() 안에 입력한다.
     @SuppressLint("MissingInflatedId")
 
+            //버튼 변수 선언
     Button btnnaver, btngoogle, btndaum, btnyoutube, btnexit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//변수에 버튼 박스 대입
         btnnaver = (Button) findViewById(R.id.btnnaver);
         btngoogle = (Button) findViewById(R.id.btngoogle);
         btndaum = (Button) findViewById(R.id.btndaum);
         btnyoutube = (Button) findViewById(R.id.btnyoutube);
         btnexit = (Button) findViewById(R.id.btnexit);
-
+//버튼 색깔
         btnnaver.setBackgroundColor(Color.GREEN);
         btngoogle.setBackgroundColor(Color.BLUE);
         btndaum.setBackgroundColor(Color.YELLOW);
         btnyoutube.setBackgroundColor(Color.LTGRAY);
         btnexit.setBackgroundColor(Color.WHITE);
 
+        //글씨 색깔
         btnnaver.setTextColor(Color.BLACK);
         btngoogle.setTextColor(Color.BLACK);
         btndaum.setTextColor(Color.BLACK);
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnnaver.setOnClickListener(new View.OnClickListener() {
             @Override
+            //클릭 시 연결되는 사이트
             public void onClick(View v) {
                 Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://naver.com"));
                 startActivity(mIntent);
